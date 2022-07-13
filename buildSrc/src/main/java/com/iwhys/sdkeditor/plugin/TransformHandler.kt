@@ -233,7 +233,7 @@ class TransformHandler(project: Project, transformInvocation: TransformInvocatio
                         detach()
                     }
                 }
-            } else {
+            } else if (!it.name.contains("META-INF")) { // Drakeet 添加了跳过 META-INF，否则 FileUtils.write 会出错
                 val outFile = File(jarFileTmpDir, it.name)
                 if (it.isDirectory && !outFile.exists()) {
                     log("The file is directory ${it.name} in the target jar package:${jarFile.name}")
