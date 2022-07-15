@@ -1,3 +1,13 @@
+Drakeet fork:
+
+```
+maven { url 'https://jitpack.io' }
+
+classpath 'com.github.drakeet:sdk-editor-plugin:1.1.4.1'
+```
+
+----
+
 ## 简介
 sdk-editor是为实现修改APP依赖的第三方SDK而开发的Gradle插件，插件利用Android Plugin官方提供的Transform API干预APK Build流程，实现对三方SDK中特定类的替换修改，不影响APP运行性能，也不会增加APK体积。
 ## 适用场景
